@@ -29,11 +29,11 @@ export class CreateMyDog1625815240512 implements MigrationInterface {
                         name: "updated_at",
                         type: "timestap",
                         default: "now()",
-                    }
-                ]
-            })
-        )
-    }
+                    },
+                ],
+            }),
+        );
+    };
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("dogs")
