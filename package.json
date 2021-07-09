@@ -4,7 +4,8 @@
   "description": "projeto feito para rede socail de seu pet",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "repository": "https://github.com/Luann244?tab=repositories",
   "author": "WL@programador",
