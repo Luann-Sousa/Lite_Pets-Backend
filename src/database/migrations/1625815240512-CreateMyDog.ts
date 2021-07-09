@@ -17,7 +17,7 @@ export class CreateMyDog1625815240512 implements MigrationInterface {
                         type: "varchar"
                     },
                     {
-                        name: "raca",
+                        name: "breed",
                         type: "varchar"
                     },
                     {

@@ -8,13 +8,13 @@ import { v4 as uuid } from 'uuid';
     @Column()
     name: string;
     @Column()
-    raca: string;
+    breed: string;
     @CreateDateColumn()
     created_at: Date;
     @UpdateDateColumn()
     updated_at: Date;
 
-    //quando criamos um dog seu id vem undefined ou bul
+    //quando criamos um dog seu id vem undefined ou null
     constructor(){
       if(!this.id){
         this.id = uuid();
