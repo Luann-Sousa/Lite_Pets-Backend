@@ -1,1 +1,2 @@
-yarn start => roda projeto
+yarn start => roda projeto 
+npx 
