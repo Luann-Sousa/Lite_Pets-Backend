@@ -1,5 +1,6 @@
 import { getCustomRepository } from 'typeorm';
 import { UserMy_DogRepositories } from '../repositories/UserMy_DogRepositories';
+import { hash } from 'bcryptjs';
 
 //minha tipage
 interface IUserMy_Dog{
@@ -21,8 +22,9 @@ class CreateUserMy_DogServices{
           if(!userMy_DogAlreadyExists){
             throw new Error("Ops email UserMy_DogAlreadyExists !");
           };
+          const passwordHash = await hash(password, 8)
           const userMy_Dog = userMy_DogRepositories.create({
-            username, email, password
+            username, email, password:passwordHash
           });
 
           await userMy_DogRepositories.save(userMy_Dog);
