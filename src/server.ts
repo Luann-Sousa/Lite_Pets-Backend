@@ -5,12 +5,9 @@ import { NextFunction, Request, Response } from 'express';//trazendo nosso expre
 import './database';
 import routes from './routes';
 
-
-
 const app = express();
 
-app.use(express.json());
- 
+app.use(express.json()); 
 app.use(routes);
 
 //midlewares de error obrigatorio 4 parametros
