@@ -5,10 +5,11 @@ import { My_DogRepositories } from "../repositories/My_DogRepositories";
 interface IMy_Dog {
   name: string;
   breed: string;
+  image?: string;
 }
 
 class CreateMy_DogServices {
-  async execute({ name, breed }: IMy_Dog) {
+  async execute({ name, breed, image }: IMy_Dog) {
     const my_DogRepositories = getCustomRepository(My_DogRepositories);
 
     if (!name) {
@@ -23,6 +24,7 @@ class CreateMy_DogServices {
     const my_dog = my_DogRepositories.create({
       name,
       breed,
+      image
     });
     await my_DogRepositories.save(my_dog);
     return my_dog;
