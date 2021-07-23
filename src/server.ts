@@ -18,12 +18,14 @@ app.use( (err: Error, request: Request, response: Response, next: NextFunction) 
     return response.status(400).json({
       error: err.message
     });
-  }
+  };
   //caso seja outro tipo de error vamos definir um Status 500
-  return response.status(500).json({
+   response.status(500).json({
     status: "error",
     message: "Internal Server Error"
   });
+
+  return next();
 
 });
 app.listen(3330, () => console.log(" Start is runing !") );

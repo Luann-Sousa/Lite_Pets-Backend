@@ -11,6 +11,7 @@ export class CreateMyDog1625815240512 implements MigrationInterface {
                         name: "id",
                         type: "uuid",
                         isPrimary: true,
+                        isGenerated: true,
                     },
                     {
                         name: "name",
@@ -18,6 +19,10 @@ export class CreateMyDog1625815240512 implements MigrationInterface {
                     },
                     {
                         name: "breed",
+                        type: "varchar"
+                    },
+                    {
+                        name: "image",
                         type: "varchar"
                     },
                     {

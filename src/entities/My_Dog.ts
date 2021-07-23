@@ -5,12 +5,19 @@ import { v4 as uuid } from 'uuid';
   class Dog {
     @PrimaryColumn()
     id: string;
+
     @Column()
     name: string;
+
     @Column()
     breed: string;
+
+    @Column()
+    image: string;
+    
     @CreateDateColumn()
     created_at: Date;
+
     @UpdateDateColumn()
     updated_at: Date;
 

@@ -5,10 +5,10 @@ import { CreateMy_DogServices } from '../services/CreateMy_DogServices';
 class CreateMy_DogController {
   async handle(request: Request, response: Response){
     const { name, breed } = request.body;
-   
-
+    const { filename: image } = request.file;
+    
     const my_dogService = new CreateMy_DogServices();
-    const my_dog = await my_dogService.execute({name, breed});
+    const my_dog = await my_dogService.execute({name, breed, image});
     return response.json(my_dog);
   }
 }
